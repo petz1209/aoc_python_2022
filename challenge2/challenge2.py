@@ -2,11 +2,6 @@
 Advent of Code 2022 Challenge 2 by pleitner
 """
 
-def get_input(filename):
-    with open(filename, "r") as f:
-        data = [x.strip("\n").split(" ") for x in f.readlines()]
-    return data
-
 
 class Rock:
     points = 1
@@ -89,6 +84,11 @@ def choice_factory(competitor, round_strategy):
         return RightChoice.draw(competitor)
     return RightChoice.win(competitor)
         
+def get_input(filename):
+    with open(filename, "r") as f:
+        data = [x.strip("\n").split(" ") for x in f.readlines()]
+    return data
+
 if __name__ == '__main__':
     main1("input.txt")
     main2("input.txt")
